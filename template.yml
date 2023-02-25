@@ -10,7 +10,7 @@ ota:
 
 # This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://georgeboot/lg-monoblock-modbus-controller/template.yaml
+  package_import_url: github://georgeboot/lg-monoblock-modbus-controller/template.yaml@master
   import_full_config: true
 
 packages:

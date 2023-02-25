@@ -1,6 +1,6 @@
 esphome:
-  includes:
-    - state-machine.h
+  libraries:
+    - georgeboot/lg-monoblock-modbus-state-machine=https://github.com/georgeboot/lg-monoblock-modbus-controller.git#master
   on_boot:
     priority: 200
     then:
@@ -15,7 +15,9 @@ modbus_controller:
 interval:
   - interval: 30s
     id: state_machine
-    then: !include { file: state-machine.yaml }
+    # call do_cycle or something on the instance
+    then: - lambda: |-
+      fsm.run_cycle();
 
 script:
   - id: on_boot

@@ -1,0 +1,22 @@
+{
+    "name": "lg-monoblock-modbus-state-machine",
+    "version": "1.0.0",
+    "description": "State machine for LG Monoblock modbus controller",
+    "keywords": "lg, modbus",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/georgeboot/lg-monoblock-modbus-controller.git"
+    },
+    "authors": [
+        {
+            "name": "georgeboot"
+        }
+    ],
+    "license": "Apache-2.0",
+    "dependencies": {},
+    "frameworks": "*",
+    "platforms": "*",
+    "build": {
+        "srcDir": "state-machine"
+    }
+}
