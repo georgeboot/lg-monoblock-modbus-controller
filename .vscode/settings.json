@@ -2,6 +2,9 @@
     "files.associations": {
         ".php_cs.dist": "php",
         "phpstan.neon.dist": "yaml",
-        "vector": "cpp"
+        "vector": "cpp",
+        "cstdint": "cpp",
+        "functional": "cpp",
+        "string": "cpp"
     }
 }

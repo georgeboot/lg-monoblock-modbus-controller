@@ -1,4 +1,4 @@
-#include "state-machine.h"
+#include "lg-monoblock-modbus-state-machine.h"
 
 input_struct::input_struct(uint_fast32_t *run_time_pointer)
 {

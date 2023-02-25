@@ -1,3 +1,12 @@
+#pragma once
+
+#ifdef ARDUINO
+#include <Arduino.h>
+#endif // ARDUINO
+
+#include <cstdint>
+#include <functional>
+#include <string>
 #include <vector>
 
 enum states

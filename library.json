@@ -16,6 +16,7 @@
     "dependencies": {},
     "frameworks": "*",
     "platforms": "*",
+    "headers": "lg-monoblock-modbus-state-machine.h",
     "build": {
         "srcDir": "state-machine"
     }
