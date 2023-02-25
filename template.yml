@@ -1,8 +1,8 @@
 substitutions:
-  name: "lg-monoblock-modbus-controller"
+  device_name: "lg-monoblock-modbus-controller"
 
 esphome:
-  name: "${name}"
+  name: "${device_name}"
   name_add_mac_suffix: true
 
 api:
@@ -14,17 +14,17 @@ dashboard_import:
   import_full_config: true
 
 packages:
-  device_base: github://georgeboot/lg-monoblock-modbus-controller/includes/device_base.yml@main
-  thermav: github://georgeboot/lg-monoblock-modbus-controller/includes/thermav/base.yml@main
+  device_base: github://georgeboot/lg-monoblock-modbus-controller/includes/device_base.yml@master
+  thermav: github://georgeboot/lg-monoblock-modbus-controller/includes/thermav/base.yml@master
 
-  # network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/wifi.yml@main
-  network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/ethernet.yml@main
+  # network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/wifi.yml@master
+  network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/ethernet.yml@master
 
-  # thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/virtual.yml@main
-  thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/j311.yml@main
+  # thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/virtual.yml@master
+  thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/j311.yml@master
 
-  # thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/modbus.yml@main
-  thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/j301.yml@main
+  # thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/modbus.yml@master
+  thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/j301.yml@master
 
 switch:
   # - platform: gpio
