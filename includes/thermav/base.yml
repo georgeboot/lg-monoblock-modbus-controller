@@ -17,7 +17,7 @@ interval:
     id: state_machine
     # call do_cycle or something on the instance
     then: - lambda: |-
-      fsm2.run_cycle();
+      fsm.run_cycle();
 
 script:
   - id: on_boot
