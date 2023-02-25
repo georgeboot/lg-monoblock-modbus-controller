@@ -1,0 +1,78 @@
+esphome:
+  project:
+    name: georgeboot.lg-monoblock-modbus-controller
+    version: "1.0"
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: arduino
+    version: 2.0.6
+
+web_server:
+  port: 80
+
+logger:
+  logs:
+    modbus_controller.sensor: WARN
+    modbus_controller.output: WARN
+    modbus.number: WARN
+    esp32.preferences: WARN
+    sensor: WARN
+    text_sensor: WARN
+    dallas.sensor: WARN
+    sdm_meter: WARN
+    number: WARN
+
+uart:
+  id: uart_modbus
+  tx_pin: GPIO17
+  rx_pin: GPIO05
+  baud_rate: 9600
+  parity: none
+  data_bits: 8
+  stop_bits: 1
+
+i2c:
+  sda: GPIO32
+  scl: GPIO04
+  scan: true
+  id: i2c_bus
+
+mcp23008:
+  - id: mcp23008_hub
+    address: 0x20
+
+dallas:
+  pin: GPIO14
+  update_interval: 60s
+
+status_led:
+  pin:
+    mcp23xxx: mcp23008_hub
+    number: 7
+    mode:
+      output: true
+    inverted: false
+
+modbus:
+  flow_control_pin: GPIO33
+  send_wait_time: 250ms
+
+text_sensor:
+  - platform: version
+    name: "${device_name} firmware version"
+    hide_timestamp: true
+
+sensor:
+  - platform: uptime
+    name: "${device_name} Uptime"
+
+  - id: board_temp
+    platform: dallas
+    index: 0
+    name: "${device_name} circuit board temperature"
+
+switch:
+  - name: "${device_name} Restart"
+    platform: restart

@@ -1,0 +1,10 @@
+switch:
+  - id: relay_heat
+    name: "Verwarming On/Off"
+    platform: gpio
+    pin:
+      mcp23xxx: mcp23008_hub
+      number: 0
+      mode:
+        output: true
+      inverted: false

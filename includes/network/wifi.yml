@@ -1,0 +1,10 @@
+wifi:
+  ap:
+    password: "12345678"
+
+captive_portal:
+  keep_user_credentials: true
+
+esp32_improv:
+  authorizer: none
+improv_serial:

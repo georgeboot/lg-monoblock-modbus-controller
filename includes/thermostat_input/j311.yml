@@ -1,0 +1,13 @@
+binary_sensor:
+  - id: thermostat_signal
+    name: "Termostat On/Off"
+    platform: gpio
+    pin:
+      mcp23xxx: mcp23008_hub
+      number: 4
+      mode:
+        input: true
+      inverted: false
+    filters:
+      - delayed_on: 500ms # Debounce
+    icon: mdi:thermostat

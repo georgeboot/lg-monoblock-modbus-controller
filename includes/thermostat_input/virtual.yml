@@ -1,0 +1,7 @@
+switch:
+  - id: thermostat_signal
+    name: "Termostat On/Off"
+    platform: template
+    optimistic: true
+    restore_state: true
+    icon: mdi:thermostat

@@ -1,0 +1,46 @@
+substitutions:
+  name: "lg-monoblock-modbus-controller"
+
+esphome:
+  name: "${name}"
+  name_add_mac_suffix: true
+
+api:
+ota:
+
+# This should point to the public location of this yaml file.
+dashboard_import:
+  package_import_url: github://georgeboot/lg-monoblock-modbus-controller/template.yaml
+  import_full_config: true
+
+packages:
+  device_base: github://georgeboot/lg-monoblock-modbus-controller/includes/device_base.yml@main
+  thermav: github://georgeboot/lg-monoblock-modbus-controller/includes/thermav/base.yml@main
+
+  # network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/wifi.yml@main
+  network: github://georgeboot/lg-monoblock-modbus-controller/includes/network/ethernet.yml@main
+
+  # thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/virtual.yml@main
+  thermostat_input: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_input/j311.yml@main
+
+  # thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/modbus.yml@main
+  thermostat_output: github://georgeboot/lg-monoblock-modbus-controller/includes/thermostat_output/j301.yml@main
+
+switch:
+  # - platform: gpio
+  #   name: "Relais 2 (J302)"
+  #   pin:
+  #     mcp23xxx: mcp23008_hub
+  #     number: 1
+  #     mode:
+  #       output: true
+  #     inverted: false
+
+  # - platform: gpio
+  #   name: "Relais 3 (J303)"
+  #   pin:
+  #     mcp23xxx: mcp23008_hub
+  #     number: 2
+  #     mode:
+  #       output: true
+  #     inverted: false
